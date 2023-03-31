@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+
+
+body {
+    background: #625d5d;
+    height: 100%;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+table,
+td {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+th{
+    border-radius: 4px;
+}
+
+td{
+    border-radius: 4px;
+}
+
+th {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgba(170, 42, 68, 0.678);
+    color: white;
+    text-align: center;
+}
+
+table{
+    border-radius: 6px;
+}
+
+tr:hover {
+    transition: 0.5s;
+    background-color:  rgb(231, 231, 203);
+}
+
+td:hover{
+    transition: 0.5s;
+    background-color: aquamarine;
+}
+
+
+
+button {
+    height: 50px;
+    width: 200px;
+    border-radius: 12px;
+    color: aqua;
+    background-color: rgba(163, 46, 69, 0.616);
+    cursor: pointer;
+    margin-left: 28%;
+}
+
+a{
+    text-decoration: none;
+}
+
+tr {
+    height: 40px;
+    width: 0;
+}
+
+.editar{
+    width: 10%;
+}
+
+.borrar{
+    width: 10%;
+}
+
+.borrar a{
+    color: red;
+}
+
+.tabla{
+    margin: 4% 0 0 10%;
+}
+  

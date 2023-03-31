@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Record</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+
+<header>
+    <a href="#" class="logo"> 
+        <img src="descarga.png" alt="One day">
+        <h2 class="Titulo">I.E Leon De Rodas</h2>
+      </a>
+      <nav>
+        <a href="" class="nav-link"> Inicio </a>
+        <a href="" class="nav-link"> Nosotros </a>
+        <a href="" class="nav-link"> Contactos </a>
+      </nav>
+</header>
+
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>identificacion</th>
+                <th>Nombre(s)</th>
+                <th>Apellido(s)</th>
+                <th>Correo</th>
+                <th>Numero telefonico</th>
+                <th>Grado</th>
+                <th>Direccion</th>
+                <th>Genero</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.eid }}</td>
+                <td>{{employee.ename}}</td>
+                <td>{{employee.eapellido}}</td>
+                <td>{{employee.eemail}}</td>
+                <td>{{ employee.econtact }}</td>
+                <td>{{ employee.egrado }}</td>
+                <td>{{ employee.edireccion }}</td>
+                <td>{{ employee.egenero }}</td>
+
+                <td class="editar">
+                    <b><a href="/edit/{{ employee.id }}" class="edit">Editar</a></b>
+                </td>
+
+                <td class="borrar">  <b><a href="/delete/{{employee.id}}" class="delete">Borrar</a></b>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button><a style="color:white;" href="/emp">Añadir Estudiante</a></button>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/edit.css' %}">
+</head>
+
+<body>
+
+    <form method="POST" action="/update/{{employee.id}}">
+        {% csrf_token %}
+
+        <div>
+            <br>
+            <p>
+                <p class="titulo">Actualizar datos</p>
+            </p>
+        </div>
+
+
+        <div>
+            <p>identificacion del estudiante:</p>
+            <div>
+                <input type="text" name="eid" value="{{employee.eid}}" />
+            </div>
+        </div>
+
+
+        <div>
+            <p>Nombre(s):</p>
+            <div>
+                <input type="text" name="ename" value="{{employee.ename}}" />
+            </div>
+        </div>
+
+        <div>
+            <p>Apellido(s):</p>
+            <div>
+                <input type="text" name="eapellido" value="{{employee.eapellido}}" />
+            </div>
+        </div>
+
+        <div>
+            <p>Correo del estudiante :</p>
+            <div>
+                <input type="text" name="eemail" value="{{employee.eemail}}" />
+            </div>
+        </div>
+
+        <div>
+            <p>numero telefonico:</p>
+            <div>
+                <input type="text" name="econtact" value="{{employee.econtact}}" />
+            </div>
+        </div>
+
+        <div>
+            <p>Grado cursando:</p>
+            <div>
+                <input type="number" name="egrado" value="{{employee.egrado}}" />
+            </div>
+        </div>
+        
+        <div>
+            <p>direccion:</p>
+            <div>
+                <input type="text" name="edireccion" value="{{employee.edireccion}}" />
+            </div>
+        </div>
+
+        <div>
+            <p>genero:</p>
+            <div>
+                <input type="text" name="egenero" value="{{employee.egenero}}" />
+            </div>
+        </div
+
+        <div>
+            <br>
+            <button type="submit">Actualizar</button>
+        </div>
+    </form>
+</body>
+</html>
